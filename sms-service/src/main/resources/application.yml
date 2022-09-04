@@ -1,0 +1,13 @@
+server:
+  port: 8083
+jdwx:
+  url: https://way.jd.com/chonry/smsapi
+  appkey: 88c4f6a467be4cf111c6070a69edae2f
+  sign: 【Cure Store】
+spring:
+  application:
+    name: sms-service
+  redis:
+    database: 0
+    host: 47.110.92.174
+    port: 6379

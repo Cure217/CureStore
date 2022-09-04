@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aliano.mapper.OrderDetailMapper">
+
+	<select id="barData" resultType="com.aliano.vo.BarResultVO">
+		select product_name name,sum(product_quantity) value from order_detail d,order_master m where d.order_id = m.order_id and m.order_status = 1 group by product_id
+	</select>
+
+	<select id="basicLineData" resultType="com.aliano.vo.BasicLineResultVO">
+		select DATE_FORMAT(d.create_time, '%Y-%m-%d') date,sum(product_quantity) value from order_detail d,order_master m where d.order_id = m.order_id and m.order_status = 1 group by DATE_FORMAT(d.create_time, '%Y-%m-%d')
+	</select>
+
+	<select id="names" resultType="java.lang.String">
+		select distinct product_name from order_detail
+	</select>
+
+	<select id="dates" resultType="java.lang.String">
+		select distinct DATE_FORMAT(order_detail.create_time, '%Y-%m-%d') from order_detail order by DATE_FORMAT(order_detail.create_time, '%Y-%m-%d')
+	</select>
+
+	<select id="stackedData" resultType="java.lang.Integer">
+		select (
+			       select COALESCE(sum(product_quantity),0) from order_detail
+			       where pi.product_id = order_detail.product_id and
+				       DATE_FORMAT(order_detail.create_time, '%Y-%m-%d') = mm.dd
+		       ) as count
+		from product_info pi,
+			(select distinct DATE_FORMAT(order_detail.create_time, '%Y-%m-%d') as dd from order_detail)
+			as mm
+		where pi.product_name = #{name} order by mm.dd
+	</select>
+</mapper>

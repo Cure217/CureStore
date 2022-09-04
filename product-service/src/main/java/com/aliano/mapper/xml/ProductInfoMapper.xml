@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.aliano.mapper.ProductInfoMapper">
+	<update id="addStock">
+		update product_info set product_stock = product_stock + #{param2} where product_id = #{param1}
+	</update>
+	<update id="updateStock">
+		update product_info set product_stock = #{param2} where product_id = #{param1}
+	</update>
+
+	<select id="findPriceById" resultType="java.math.BigDecimal">
+		select product_price from product_info where product_id = #{id}
+	</select>
+
+	<select id="findStockById" resultType="java.lang.Integer">
+		select product_stock from product_info where product_id = #{id}
+	</select>
+</mapper>

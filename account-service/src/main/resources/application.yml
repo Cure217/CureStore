@@ -1,0 +1,18 @@
+server:
+  port: 8084
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/corestore?serverTimezone=GMT%2b8
+    username: root
+    password: 123456
+  application:
+    name: account-service
+  redis:
+    database: 0
+    host: 47.110.92.174
+    port: 6379
+mybatis-plus:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: com/aliano/mapper/xml/*.xml

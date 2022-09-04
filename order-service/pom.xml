@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<!--引入common-service环境-->
+		<artifactId>common-service</artifactId>
+		<groupId>com.aliano</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath />
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<dependencies>
+		<!-- feign -->
+		<dependency>
+			<groupId>org.springframework.cloud</groupId>
+			<artifactId>spring-cloud-starter-openfeign</artifactId>
+			<version>2.2.2.RELEASE</version>
+		</dependency>
+
+		<!-- RocketMQ -->
+		<dependency>
+			<groupId>org.apache.rocketmq</groupId>
+			<artifactId>rocketmq-spring-boot-starter</artifactId>
+			<version>2.1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.rocketmq</groupId>
+			<artifactId>rocketmq-client</artifactId>
+			<version>4.7.0</version>
+		</dependency>
+
+		<!-- Common Service -->
+		<dependency>
+			<groupId>com.aliano</groupId>
+			<artifactId>common-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+		<!-- Repository Service -->
+		<dependency>
+			<groupId>com.aliano</groupId>
+			<artifactId>repository-service</artifactId>
+			<version>0.0.1-SNAPSHOT</version>
+		</dependency>
+
+	</dependencies>
+
+	<artifactId>order-service</artifactId>
+
+	<properties>
+		<maven.compiler.source>8</maven.compiler.source>
+		<maven.compiler.target>8</maven.compiler.target>
+	</properties>
+
+	<!--在父包添加即可-->
+	<!--<build>-->
+	<!--	<resources>-->
+	<!--		<resource>-->
+	<!--			<directory>src/main/java</directory>-->
+	<!--			<includes>-->
+	<!--				<include>**/*.xml</include>-->
+	<!--			</includes>-->
+	<!--		</resource>-->
+	<!--	</resources>-->
+	<!--</build>-->
+</project>

@@ -1,0 +1,7 @@
+server:
+  port: 8085
+spring:
+  application:
+    name: mq-serivce
+rocketmq:
+  name-server: 47.110.92.174:9876
