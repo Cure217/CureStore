@@ -49,7 +49,7 @@ public class ProductCategoryServiceImpl extends ServiceImpl<ProductCategoryMappe
             for (ProductInfo productInfo : productInfoList) {
                 BuyerProductInfoVO vo1 = new BuyerProductInfoVO();
                 //vo1.setProductId(productInfo.getProductId());
-                BeanUtils.copyProperties(productInfo,vo1);
+                BeanUtils.copyProperties(productInfo,vo1); // 工具类 用来快速执行上面的set get操作
                 buyerProductInfoVOS.add(vo1);
             }
             vo.setGoods(buyerProductInfoVOS);

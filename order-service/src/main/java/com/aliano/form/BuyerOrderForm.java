@@ -7,6 +7,7 @@ import java.util.List;
 /**
  * @Author Cure
  * @Time 2022/5/19 20:44
+ * 作为参数列表
  */
 @Data
 public class BuyerOrderForm {

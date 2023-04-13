@@ -23,6 +23,6 @@ public class BuyerProductInfoVO {
     private String productDescription;
     @JsonProperty("icon")
     private String productIcon;
-    private Integer quantity = 0;
+    private Integer quantity = 0; // 商品页面展示，用户未添加商品，默认是0
 
 }

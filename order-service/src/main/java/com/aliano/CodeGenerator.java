@@ -30,7 +30,7 @@ public class CodeGenerator {
         DataSourceConfig dataSourceConfig = new DataSourceConfig();
         dataSourceConfig.setDbType(DbType.MYSQL);
         dataSourceConfig.setDriverName("com.mysql.cj.jdbc.Driver");
-        dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/corestore?serverTimezone=UTC");
+        dataSourceConfig.setUrl("jdbc:mysql://localhost:3306/curestore?serverTimezone=UTC");
         dataSourceConfig.setUsername("root");
         dataSourceConfig.setPassword("123456");
         autoGenerator.setDataSource(dataSourceConfig);

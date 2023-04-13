@@ -11,6 +11,7 @@ import java.sql.ResultSet;
 /**
  * @Author Cure
  * @Time 2022/5/19 20:15
+ *  统一异常处理
  */
 @RestControllerAdvice
 @Slf4j

@@ -48,6 +48,7 @@ public class ProductInfoServiceImpl extends ServiceImpl<ProductInfoMapper, Produ
     @Autowired(required = false)
     private ProductCategoryMapper productCategoryMapper;
 
+    // 重入锁 或者在Boolean前面加synchronized
     private ReentrantLock reentrantLock = new ReentrantLock();
 
     @Override
