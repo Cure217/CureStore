@@ -63,20 +63,20 @@ public class SellerOrderController {
         return ResultVOUtil.success(null);
     }
 
-    //柱状图
+    //柱状图 只统计商品的总销量
     @GetMapping("barSale")
     public ResultVO barSale() {
         BarVO barVO = this.orderDetailService.barData();
         return ResultVOUtil.success(barVO);
     }
 
-    //基础折线图
+    //基础折线图 只统计每一天的销量
     @GetMapping("/basicLineSale")
     public ResultVO basicLineSale(){
         return ResultVOUtil.success(this.orderDetailService.basicLineData());
     }
 
-    //折线图堆叠
+    //折线图堆叠 统计某个商品某几天的销量 某一天各自的销量
     @GetMapping("/stackedLineSale")
     public ResultVO stackedLineSale(){
         return ResultVOUtil.success(this.orderDetailService.stackedLineData());

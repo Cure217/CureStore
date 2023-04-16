@@ -66,13 +66,13 @@ import lombok.EqualsAndHashCode;
       /**
      * 创建时间
      */
-        @TableField(fill = FieldFill.INSERT)
+        @TableField(fill = FieldFill.INSERT) // 自动添加时间用
       private LocalDateTime createTime;
 
       /**
      * 修改时间
      */
-        @TableField(fill = FieldFill.INSERT_UPDATE)
+        @TableField(fill = FieldFill.INSERT_UPDATE) // 自动更新时间用
       private LocalDateTime updateTime;
 
 

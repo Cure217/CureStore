@@ -10,7 +10,7 @@ spring:
     name: account-service
   redis:
     database: 0
-    host: 47.110.92.174
+    host: 192.168.146.128
     port: 6379
 mybatis-plus:
   configuration:

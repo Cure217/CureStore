@@ -20,11 +20,11 @@
 
 	<dependencies>
 		<!-- 短信接口 -->
-<!--		<dependency>-->
-<!--			<groupId>com.jdwx</groupId>-->
-<!--			<artifactId>my_sms</artifactId>-->
-<!--			<version>1.0</version>-->
-<!--		</dependency>-->
+		<dependency>
+			<groupId>com.jdwx</groupId>
+			<artifactId>my_sms</artifactId>
+			<version>1.0</version>
+		</dependency>
 
 		<!-- Gson -->
 		<dependency>

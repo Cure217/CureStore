@@ -18,9 +18,9 @@
 		<maven.compiler.target>8</maven.compiler.target>
 	</properties>
 
-	<configuration>
-		<skipTests>true</skipTests>
-	</configuration>
+<!--	<configuration>-->
+<!--		<skipTests>true</skipTests>-->
+<!--	</configuration>-->
 
 	<dependencies>
 		<!-- Common Service -->

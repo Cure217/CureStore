@@ -117,7 +117,7 @@ public class SellerProductController {
         }else {
             productInfo.setProductStatus(0);
         }
-        this.productInfoService.updateById(productInfo);
+        this.productInfoService.updateById(productInfo); // 新创建出来的字段里面只有id和status 其他值为null，但是不会覆盖原有的值
         return ResultVOUtil.success(null);
     }
 
@@ -167,7 +167,7 @@ public class SellerProductController {
         if(productInfoList==null){
             return ResultVOUtil.fail("导入Excel失败！");
         }
-        boolean result = this.productInfoService.saveBatch(productInfoList);
+        boolean result = this.productInfoService.saveBatch(productInfoList); // 批量保存
         if(result)return ResultVOUtil.success(null);
         return ResultVOUtil.fail("导入Excel失败！");
     }

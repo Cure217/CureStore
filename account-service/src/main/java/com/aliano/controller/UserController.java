@@ -67,7 +67,7 @@ public class UserController {
 
     //用户登录
     @GetMapping("/login")
-    public ResultVO login(UserForm userForm) {
+    public ResultVO login(UserForm userForm) { // get请求不能传json 所以不需要加@RequestBody
         boolean b = RegexValidateUtil.checkMobile(userForm.getMobile());
         if (!b) {
             throw new ShopException(ResponseEnum.MOBILE_ERROR.getMsg());

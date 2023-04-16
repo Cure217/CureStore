@@ -6,7 +6,7 @@
 		<artifactId>curestore</artifactId>
 		<groupId>com.aliano</groupId>
 		<version>0.0.1-SNAPSHOT</version>
-		<!--<relativePath />-->
+<!--		<relativePath />-->
 	</parent>
 	<packaging>pom</packaging>
 	<modelVersion>4.0.0</modelVersion>
