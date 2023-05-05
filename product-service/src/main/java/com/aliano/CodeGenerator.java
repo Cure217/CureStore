@@ -49,14 +49,15 @@ public class CodeGenerator {
         autoGenerator.setPackageInfo(packageConfig);
         //策略配置
         StrategyConfig strategyConfig = new StrategyConfig();
-        strategyConfig.setInclude("product_category","product_info");
+        // strategyConfig.setInclude("product_category","product_info");
+        strategyConfig.setInclude("banner");
         strategyConfig.setNaming(NamingStrategy.underline_to_camel);
         strategyConfig.setColumnNaming(NamingStrategy.underline_to_camel);
         strategyConfig.setEntityLombokModel(true);
-        TableFill tableFill = new TableFill("create_time", FieldFill.INSERT);
-        TableFill tableFill2 = new TableFill("update_time", FieldFill.INSERT_UPDATE);
-        List<TableFill> list = Arrays.asList(tableFill,tableFill2);
-        strategyConfig.setTableFillList(list);
+        // TableFill tableFill = new TableFill("create_time", FieldFill.INSERT);
+        // TableFill tableFill2 = new TableFill("update_time", FieldFill.INSERT_UPDATE);
+        // List<TableFill> list = Arrays.asList(tableFill,tableFill2);
+        // strategyConfig.setTableFillList(list);
         autoGenerator.setStrategy(strategyConfig);
         //启动
         autoGenerator.execute();

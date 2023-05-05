@@ -13,6 +13,6 @@ mybatis-plus:
     log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
   mapper-locations: com/aliano/mapper/xml/*.xml
 rocketmq:
-  name-server: 47.110.92.174:9876
+  name-server: 192.168.146.129:9876
   producer:
     group: order

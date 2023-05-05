@@ -9,5 +9,5 @@ spring:
     name: sms-service
   redis:
     database: 0
-    host: 192.168.146.128
+    host: 192.168.146.129
     port: 6379
